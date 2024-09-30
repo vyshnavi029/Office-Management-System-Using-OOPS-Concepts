@@ -45,7 +45,7 @@ class employee
 				cout<<"Enter the new name: ";
 				cin>>c1;
 				employee_name = c1;
-				cout << "Name successfully updated!\n"; // Added feedback
+				cout << "Name successfully updated!\n"; 
 			}
 			if(choice==2)
 			{
@@ -53,7 +53,7 @@ class employee
 				cout<<"Enter the new age: ";
 				cin>>c2;
 				age = c2;
-				cout << "Age successfully updated!\n"; // Added feedback
+				cout << "Age successfully updated!\n"; 
 			}
 			if(choice==3)
 			{
@@ -61,7 +61,7 @@ class employee
 				cout<<"Enter the amount of salary to be incremented: ";
 				cin>>k;
 				salary += k;
-				cout << "Salary successfully updated!\n"; // Added feedback
+				cout << "Salary successfully updated!\n"; 
 		    }
 		}
 };
@@ -140,7 +140,7 @@ int main()
 	employee *ptr[100];
 	int n = 1, choice2, k1, i = 1, q, t;
 	char choice;
-	int removed[100] = {0}; // To track removed employees
+	int removed[100] = {0}; /
 	
 	while(1)
 	{
@@ -189,7 +189,7 @@ int main()
 		{
 			for(int j = 1; j < n; j++)
 			{
-				if(removed[j]) continue;  // Skip removed employees
+				if(removed[j]) continue;  
 				cout << "\nDetails of employee " << j << ":\n";
 				cout << endl;
 				ptr[j]->get();
@@ -222,7 +222,7 @@ int main()
 		{
 			if(ptr[j]->employee_id == k1 && !removed[j])
 			{
-				++*ptr[j];  // Modify details
+				++*ptr[j];  
 				cout << "\nUpdated Details\n";
 				cout << endl;
 				ptr[j]->get();
@@ -241,7 +241,7 @@ int main()
 		{
 			if(ptr[j]->employee_id == k1 && !removed[j])
 			{
-				removed[j] = 1;  // Mark employee as removed
+				removed[j] = 1;  
 				cout<<"Employee details successfully removed!\n";
 				t = 1;
 				break;
@@ -251,7 +251,7 @@ int main()
 		break;
 	
 	case 0:
-		exit(0);  // Exit only on user choice
+		exit(0); 
 	}
     }
 return 0;
